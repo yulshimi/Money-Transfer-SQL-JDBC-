@@ -5,7 +5,7 @@ public class FTM
 	public static void main(String[] args) throws SQLException, ClassNotFoundException
 	{
 		Class.forName("org.postgresql.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost/PA2Bank", args[0], args[1]);
+		Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost/pa2bank", args[0], args[1]);
 		DatabaseMetaData dbm = conn.getMetaData();
 		ResultSet rs = dbm.getTables(null, null, "influence", null);
 		Statement stmt_a = conn.createStatement();
